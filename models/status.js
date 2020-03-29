@@ -5,6 +5,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Status.associate = function(models) {
     // associations can be defined here
+    //Un estado puede tenre muchas tareas
+    Status.hasMany(models.Task);
   };
   return Status;
 };
