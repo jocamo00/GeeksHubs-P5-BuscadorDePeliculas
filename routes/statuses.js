@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
             res.status(500).send({
                 message: 'Ha habido un problema al cargar los estados'
             });
-        })
-})
+        });
+});
 
 
 //Crear un estado
@@ -24,8 +24,8 @@ router.post('/', (req, res) => {
             res.status(500).send({
                 message: 'Ha habido un problema al crear el estado'
             });
-        })
-})
+        });
+});
 
 
 
