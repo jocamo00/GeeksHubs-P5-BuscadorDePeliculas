@@ -16,5 +16,17 @@ router.get('/', (req, res) => {
 });
 
 
+//Crear una usuario
+router.post('/', (req, res) => {
+    User.create({...req.body})
+        .then(users => res.status(201).send(users))
+        .catch(err => {
+            console.log(err)
+            res.status(500).send({
+                message: 'Ha habido un problema al crear el usuario'
+            });
+        });
+});
+
 
 module.exports = router;
