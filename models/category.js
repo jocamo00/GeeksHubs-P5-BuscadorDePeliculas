@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Category.associate = function(models) {
     // associations can be defined here
-    
+    //Una categoria tiene muchas tareas
+    Category.hasMany(models.Task);
   };
   return Category;
 };
