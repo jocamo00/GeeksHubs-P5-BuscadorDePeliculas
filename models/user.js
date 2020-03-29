@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   User.associate = function(models) {
     // associations can be defined here
+    //Un usuario puede tener muchas tareas
+    User.hasMany(models.Task);
   };
   return User;
 };
