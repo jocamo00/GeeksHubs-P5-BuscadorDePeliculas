@@ -10,13 +10,13 @@ module.exports = (sequelize, DataTypes) => {
   Task.associate = function(models) {
     // associations can be defined here
     //Una tarea pertenece a un estado
-    Task.BelongsTo(models.Status);
+    Task.belongsTo(models.Status);
 
     //Una tarea pertenece a una categoria
-    Task.BelongsTo(models.Category);
+    Task.belongsTo(models.Category);
 
     //Una tarea pertenece a un usuario
-    Task.BelongsTo(models.User);
+    Task.belongsTo(models.User);
   };
   return Task;
 };
