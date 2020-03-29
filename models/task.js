@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Task.associate = function(models) {
     // associations can be defined here
+    //Una tarea tiene un estado
+    Task.hasOne(models.Status);
+
+    //Una tarea tiene una categoria
+    Task.hasOne(models.Category);
+
+    //Una tarea tiene un usuario
+    Task.hasOne(models.User);
   };
   return Task;
 };
