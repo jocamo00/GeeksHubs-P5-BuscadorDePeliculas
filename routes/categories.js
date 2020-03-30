@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category } = require('../models/index.js');
+const CategoryController = require('../controllers/CategoryController.js');
 
 
 //Mostrar todas las categorias

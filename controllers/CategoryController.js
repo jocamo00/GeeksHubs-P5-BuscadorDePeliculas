@@ -1,4 +1,4 @@
-const { Status } = require('../models/index.js');
+const { Category } = require('../models/index.js');
 
 
 const CategoryController = {
