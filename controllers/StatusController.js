@@ -29,6 +29,22 @@ const StatusController = {
                 });
             });
     },
+
+    getId(req, res) {
+        let _id = req.params.id
+
+        Status.findAll({
+                where: { id: _id }
+            })
+            .then(statuses => { res.send(statuses)})
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al cargar el estado'
+                });
+            });
+    },
+
     insert(req, res) {
         Status.create({...req.body})
             .then(statuses => res.status(201).send(statuses))

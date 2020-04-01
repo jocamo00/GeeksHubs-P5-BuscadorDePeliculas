@@ -12,6 +12,22 @@ const UserController = {
                 });
             });
     },
+
+    getId(req, res) {
+        let _id = req.params.id
+
+        User.findAll({
+                where: { id: _id }
+            })
+            .then(users => { res.send(users)})
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al cargar el usuario'
+                });
+            });
+    },
+
     insert(req, res) {
         User.create({...req.body})
             .then(users => res.status(201).send(users))
