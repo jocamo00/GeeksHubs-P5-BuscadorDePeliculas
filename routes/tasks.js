@@ -11,6 +11,9 @@ router.get('/id/:id', TaskController.getId);
 //Crear una tarea
 router.post('/', TaskController.insert );
 
+//Modificar una tarea
+router.put('/update/:id', TaskController.updateId);
+
 
 
 

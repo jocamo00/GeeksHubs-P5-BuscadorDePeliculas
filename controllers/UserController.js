@@ -54,11 +54,23 @@ const UserController = {
                 });
             });
         }
+
+        /*destroyId(req, res) {
+            let _id = req.params.id
+
+            User.destroy({
+                    where: { id: _id }
+                })
+                .then(users => res.status(201).send(users))
+                .catch(err => {
+                    console.log(err)
+                    res.status(500).send({
+                        message: 'Ha habido un problema al eliminar el usuario'
+                    });
+                });
+        }*/
 }
 
-
 module.exports = UserController;
-
-
 
 

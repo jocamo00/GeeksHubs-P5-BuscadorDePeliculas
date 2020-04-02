@@ -15,6 +15,9 @@ router.post('/', UserController.insert);
 //Modificar un usuario
 router.put('/update/:id', UserController.updateId);
 
+//Eliminar un usuario
+//router.put('/destroy/:id', UserController.destroyId);
+
 
 
 

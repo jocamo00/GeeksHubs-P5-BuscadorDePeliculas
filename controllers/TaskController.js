@@ -37,6 +37,22 @@ const TaskController = {
                     message: 'Ha habido un problema al crear la tarea'
                 });
             });
+    },
+
+    updateId(req, res) {
+        let _id = req.params.id
+
+        Task.update({ ...req.body }, 
+            {
+                where: { id: _id }
+            })
+            .then(tasks => res.status(201).send(tasks))
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al modificar la tarea'
+                });
+            });
     }
     
 }
