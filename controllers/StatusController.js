@@ -54,6 +54,22 @@ const StatusController = {
                     message: 'Ha habido un problema al crear el estado'
                 });
             });
+    },
+
+    updateId(req, res) {
+        let _id = req.params.id
+
+        Status.update({ ...req.body }, 
+            {
+                where: { id: _id }
+            })
+            .then(statuses => res.status(201).send(statuses))
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al modificar el estado'
+                });
+            });
     }
 }
 

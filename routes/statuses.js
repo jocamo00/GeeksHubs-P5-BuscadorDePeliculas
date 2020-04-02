@@ -11,6 +11,9 @@ router.get('/id/:id', StatusController.getId);
 //Crear un estado
 router.post('/', StatusController.insert);
 
+//Modificar un estado
+router.put('/update/:id', StatusController.updateId);
+
 
 
 module.exports = router;
