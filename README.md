@@ -1,9 +1,9 @@
 # GeeksHubs-P5-ToDo
 
 _El proyecto es un Backend, que estructura un ToDo, que consta de una metodología para la organización y designación de tareas, se podrán realizar:
- * consultas de las tareas y sus estados,
- * generar nuevas tareas,
- * eliminar tareas,
+ * consultas de las tareas y sus estados
+ * generar nuevas tareas
+ * eliminar tareas
  * asignación de la tarea a un usuario._
 
 ## Comenzando 🚀
