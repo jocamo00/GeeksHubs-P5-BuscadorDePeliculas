@@ -9,8 +9,11 @@ router.get('/', UserController.getAll);
 //Mostrar un usuario por id
 router.get('/id/:id', UserController.getId);
 
-//Crear una usuario
+//Crear un usuario
 router.post('/', UserController.insert);
+
+//Modificar un usuario
+router.put('/update/:id', UserController.updateId);
 
 
 

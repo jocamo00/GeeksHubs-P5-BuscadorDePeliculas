@@ -29,7 +29,7 @@ const UserController = {
     },
 
     insert(req, res) {
-        User.create({...req.body})
+        User.create({ ...req.body })
             .then(users => res.status(201).send(users))
             .catch(err => {
                 console.log(err)
@@ -37,8 +37,28 @@ const UserController = {
                     message: 'Ha habido un problema al crear el usuario'
                 });
             });
-    }
+    },
+
+    updateId(req, res) {
+        let _id = req.params.id
+
+        User.update({ ...req.body },
+        {
+            where: { id: _id }
+        })
+        .then(users => res.status(201).send(users))
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al modificar el usuario'
+                });
+            });
+        }
 }
 
 
 module.exports = UserController;
+
+
+
+
