@@ -65,7 +65,7 @@ Conexión Base de Datos
 ```
 
 
-Modelo tabla tarea
+Modelo tabla tarea y associaciones
 ```sh
 module.exports = (sequelize, DataTypes) => {
   const Task = sequelize.define('Task', {
