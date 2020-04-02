@@ -37,6 +37,22 @@ const CategoryController = {
                     message: 'Ha habido un problema al crear la categoria'
                 });
             });
+    },
+
+    updateId(req, res) {
+        let _id = req.params.id
+
+        Category.update({ ...req.body }, 
+            {
+                where: { id: _id }
+            })
+            .then(categories => res.status(201).send(categories))
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({
+                    message: 'Ha habido un problema al modificar la categoria'
+                });
+            });
     }
 }
 

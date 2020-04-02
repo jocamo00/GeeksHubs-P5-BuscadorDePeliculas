@@ -11,6 +11,9 @@ router.get('/id/:id', CategoryController.getId);
 //Crear una categoria
 router.post('/', CategoryController.insert);
 
+//Modificar una categoria
+router.put('/update/:id', CategoryController.updateId);
+
 
 
 
